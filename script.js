@@ -1,9 +1,4 @@
-/******************************************
-Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
-******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 var quotes =
 [
   {
@@ -35,6 +30,7 @@ year: "",
 
 
 
+
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number
@@ -43,36 +39,41 @@ year: "",
 
 ***/
 function getRandomQuote(){
-Math.floor(Math.Random()* (quotes.length))
+Math.floor(Math.random()* (quotes.length))
 return quotes [getRandomQuote]
 
 }
 
-
-//function getRandomColor
-//Math.floor(Math.Random) * RBG
+var randomcolor;
+function getRandomColor
+Math.floor(Math.Random()) * RBG);
 
 
 function printQuote(){
 var printIt = getRandomQuote;
 var printHTML = '';
 
-<p class="quote">randomQuote.quote</p>
-<p class="quote">randomQuote.source</p>
+<p class="quote">randomQuote.quote
+
 
 if(randomQuote.quote) {
-  <span class = quotes.citation + printIt </span>
+  +=<span class = quotes.citation + printIt </span>
   else {
-    <span class = "Unknown" + printIt  </span>
+    +=<span class = "Unknown" + printIt  </span>
+
+      </p>
   }
 }
 if(randomQuote.source)
 
 {
-  <span class = quotes.source + printIt </span>
+  +=<span class = quotes.source + printIt </span>
   else{
-    <span class = "Unknown" + printIt </span>
+    +=<span class = "Unknown" + printIt </span>
+</p>
+
   }
+
 
 }
 
