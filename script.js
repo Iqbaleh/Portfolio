@@ -1,5 +1,5 @@
 
-var quotes =
+var theQuotes =
 [
   {
 
@@ -24,88 +24,68 @@ year: "",
 
 }
 
+,
+{
+quote: "Drake",
+source: "Drakee",
+citation: "ok",
+year: "",
+
+
+}
+
+,
+{
+quote: "test",
+source: "testt",
+citation: "",
+year: "",
+
+
+}
+,
+{
+quote: "Test quote",
+source: "RIFF RAFF",
+citation: "",
+year: "",
+
+
+}
+
 ];
 
+ // ok virker her til
+
+
+function getRandomFunction(){
+var randomNum = theQuotes.length;
+return Math.floor(Math.random() * randomNum);
 
 
 
-
-
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-
-
-***/
-function getRandomQuote(){
-Math.floor(Math.random()* (quotes.length))
-return quotes [getRandomQuote]
 
 }
-
-var randomcolor;
-function getRandomColor
-Math.floor(Math.Random()) * RBG);
-
 
 function printQuote(){
-var printIt = getRandomQuote;
-var printHTML = '';
+var printer = getRandomFunction();
+    var printonHTML = "";
+    printonHTML += '<p class="quotes">' + printer.quote + '</p>';
+    printonHTML += '<p class="source">' + printer.source;
 
-<p class="quote">randomQuote.quote
+          if (printer.citation) {
 
+          printonHTML +=  '<span class="citation">' + printer.citation + '</span>';
+          }
+            if (printer.year) {
+          printonHTML +=  '<span class="year">' + printer.year + '</span>';
 
-if(randomQuote.quote) {
-  +=<span class = quotes.citation + printIt </span>
-  else {
-    +=<span class = "Unknown" + printIt  </span>
+          }
+printonHTML += '</p>'
+console.log(printonHTML); //it doesnt print out anything at all
 
-      </p>
-  }
-}
-if(randomQuote.source)
+document.getElementById("quote-box").innerHTML = printonHTML;
 
-{
-  +=<span class = quotes.source + printIt </span>
-  else{
-    +=<span class = "Unknown" + printIt </span>
-</p>
-
-  }
-
+document.getElementById("loadQuote").addEventListener("click", printQuote, false);
 
 }
-
-
-document.getElementById("quote-box").innerHTML = printHTML;
-
-
-
-/***
-  Create the `printQuote` function to:
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string.
-***/
-
-
-
-
-/***
-  When the "Show another quote" button is clicked, the event listener
-  below will be triggered, and it will call, or "invoke", the `printQuote`
-  function. So do not make any changes to the line of code below this
-  comment.
-***/
-
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
